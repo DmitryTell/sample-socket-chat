@@ -1,159 +1,159 @@
 @font-face {
-  font-family: StratosSkyeng;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(../../public/stratosskyengweb-regular.woff2) format("woff2");
+    font-family: StratosSkyeng;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../../public/stratosskyengweb-regular.woff2) format("woff2");
 }
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scrollbar-width: none;
+    scrollbar-width: none;
 }
 
 body {
-  background: #000;
-  font-family: StratosSkyeng;
+    background: #000;
+    font-family: StratosSkyeng;
 }
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 .input-container {
-  width: 262px;
-  height: 35px;
-  padding: 8px 11px;
-  position: relative;
+    width: 262px;
+    height: 35px;
+    padding: 8px 11px;
+    position: relative;
 }
 .input-container::before {
-  content: "";
-  background-color: #d9d9d9;
-  border-radius: 4px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.1;
+    content: "";
+    background-color: #d9d9d9;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
 }
 .input-container input {
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  opacity: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    opacity: 1;
 }
 .input-container input::-moz-placeholder {
-  opacity: 0.25;
+    opacity: 0.25;
 }
 .input-container input::placeholder {
-  opacity: 0.25;
+    opacity: 0.25;
 }
 
 .button {
-  width: 35px;
-  height: 34px;
-  background: url(../../public/button.svg);
-  border: none;
+    width: 35px;
+    height: 34px;
+    background: url(../../public/button.svg);
+    border: none;
 }
 
 .container {
-  max-width: 348px;
-  margin: 0 auto;
+    max-width: 348px;
+    margin: 0 auto;
 }
 
 .app {
-  width: 100%;
-  min-height: 391px;
-  background: #242424;
-  border-radius: 6px;
-  padding: 26px 25px 22px;
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    min-height: 391px;
+    background: #242424;
+    border-radius: 6px;
+    padding: 26px 25px 22px;
+    display: flex;
+    flex-direction: column;
 }
 .app__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .app__title {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: normal;
-  color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
 }
 .app__status {
-  display: flex;
-  align-items: center;
-  gap: 9px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
 }
 .app__text-status {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-  opacity: 0.7;
-  color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.7;
+    color: #fff;
 }
 .app__window {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 .app .window__empty-text {
-  padding-top: 50%;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  color: #fff;
-  opacity: 0.25;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    padding-top: 50%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    color: #fff;
+    opacity: 0.25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .app .window__messages {
-  padding-top: 26px;
-  padding-bottom: 26px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 15px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
 }
 .app .window__message {
-  width: 236px;
-  height: 61px;
-  padding: 10px 11px;
-  background: #fff;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+    width: 236px;
+    height: 61px;
+    padding: 10px 11px;
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 .app .window__text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    color: #000;
 }
 .app .window__sid {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
-  color: #000;
-  opacity: 0.25;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    color: #000;
+    opacity: 0.25;
 }
 .app__form {
-  display: flex;
-  gap: 12px;
-}/*# sourceMappingURL=main.css.map */
+    display: flex;
+    gap: 12px;
+}
