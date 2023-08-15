@@ -1,0 +1,18 @@
+.app__top
+    h2.app__title Socket chat
+    .app__status
+        img(src=status ? "./public/online-visual-status.svg" : "./public/offline-visual-status.svg")
+        span.app__text-status= status ? "Online" : "Offline"
+.app__window.window
+    if messages.length < 1
+        p.window__empty-text Нет сообщений
+    else
+        ul.window__messages
+            each message in messages
+                li.window__message
+                    span.window__text= message.content
+                    span.window__sid= message.sid
+.app__form
+    .input-container
+        input(type="text" placeholder="Начните печатать" id="message" disabled=!status)
+    button.button#send

@@ -1,0 +1,73 @@
+@font-face {
+    font-family: StratosSkyeng;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../../public/stratosskyengweb-regular.woff2) format("woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+    background: #000;
+    font-family: StratosSkyeng;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.input-container {
+    width: 262px;
+    height: 35px;
+    padding: 8px 11px;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-color: #d9d9d9;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.1;
+    }
+
+    & input {
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        color: $interface-text-color;
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+    }
+
+    & input::placeholder {
+        opacity: 0.25;
+    }
+}
+
+.button {
+    width: 35px;
+    height: 34px;
+    background: url(../../public/button.svg);
+    border: none;
+}
