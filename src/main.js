@@ -15,8 +15,8 @@ getStatus((status) => {
     appElement.innerHTML = template({ status: isOnline, messages: messages });
 });
 
-getMessages((newMessages) => {
-    messages = newMessages;
+getMessages((data) => {
+    messages = data;
 
     appElement.innerHTML = template({
         status: isOnline,

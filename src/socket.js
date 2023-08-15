@@ -4,15 +4,13 @@ const socket = io("http://localhost:5000", {
     transports: ["websocket"],
 });
 
-export function getStatus(setNewStatus) {
+export function getStatus(set) {
     socket.on("connect", () => {
-        setNewStatus(true);
+        set(true);
     });
 
     socket.on("disconnect", () => {
-        alert("Связь с сервером потеряна");
-
-        setNewStatus(false);
+        set(false);
     });
 }
 
