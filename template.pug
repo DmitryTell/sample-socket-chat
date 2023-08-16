@@ -1,3 +1,6 @@
+script.
+    import sendMessage from 'src/event.js'
+
 .app__top
     h2.app__title Socket chat
     .app__status
@@ -15,7 +18,4 @@
 .app__form
     .input-container
         input(type="text" placeholder="Начните печатать" id="message" disabled=!status)
-    button.button#send
-
-    script.
-        import '/src/sending.js'
+    button.button#send(onclick="sendForm()")
