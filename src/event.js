@@ -1,5 +1,13 @@
-function sendMessage() {
-    console.log("Click");
-}
+import { sendMessage } from "./socket.js";
 
-export default sendMessage;
+export function initEvent() {
+    const sendElement = document.querySelector("#send");
+
+    sendElement.addEventListener("click", () => {
+        const message = document.querySelector("#message").value;
+
+        if (message) {
+            sendMessage(message);
+        }
+    });
+}

@@ -1,27 +1,25 @@
 "use strict";
 
-import template from "../template.pug";
 import { getMessages, getStatus } from "./socket.js";
 import "./css/main.css";
+import { renderApp } from "./render.js";
 
 const appElement = document.querySelector("#app");
-
-let messages = [];
-let isOnline = false;
+const context = {
+    messages: [],
+    status: false,
+};
 
 getStatus((status) => {
-    isOnline = status;
+    context.status = status;
 
-    appElement.innerHTML = template({ status: isOnline, messages: messages });
+    renderApp(appElement, context);
 });
 
 getMessages((data) => {
-    messages = data;
+    context.messages = data;
 
-    appElement.innerHTML = template({
-        status: isOnline,
-        messages: messages,
-    });
+    renderApp(appElement, context);
 });
 
-appElement.innerHTML = template({ status: isOnline, messages: messages });
+renderApp(appElement, context);

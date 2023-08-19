@@ -34,7 +34,7 @@ module.exports = {
     devServer: {
         proxy: {
             "/socket.io": {
-                target: "http://localhost:5000",
+                target: "http://84.38.181.252:5000",
                 ws: true,
                 secure: false,
                 changeOrigin: true,
@@ -43,7 +43,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "index.html",
+            template: "index.pug",
         }),
         new CopyPlugin({
             patterns: [{ from: "public", to: "public" }],
